@@ -1,6 +1,9 @@
 :root {
-  --primarycolor: brown;
-  --secondarycolor: rgb(68, 67, 67);
+  --primarycolor: rgb(168, 82, 97);
+  --secondarycolor: beige;
+  --gray: rgb(204, 201, 201);
+  --right: rgb(41, 128, 179);
+  --done: rgb(25, 150, 150);
 }
 body {
   font-size: 32px;
@@ -11,16 +14,32 @@ body {
 }
 .counter {
   background-color: var(--primarycolor);
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  color: beige;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  color: var(--secondarycolor);
   font-weight: bold;
   cursor: pointer;
 }
+#reset {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 50%;
+  font-size: 17px;
+  color: var(--gray);
+  cursor: pointer;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 3px;
+  border: 1px dotted var(--gray);
+}
+.bigCounter {
+  position: relative;
+}
 h1 {
   text-align: center;
-  color: white;
+  color: var(--secondarycolor);
   background-color: var(--primarycolor);
   margin-bottom: 0;
   border-radius: 10px;
@@ -29,9 +48,25 @@ h1 {
 a {
   text-decoration: none;
   text-align: center;
-  color: var(--secondarycolor);
+  color: var(--gray);
   font-weight: bold;
 }
 .choose {
   text-align: center;
+}
+.up-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 7px;
+  background-color: var(--primarycolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondarycolor);
+  font-weight: bold;
+  padding: 6px;
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  display: none;
 }

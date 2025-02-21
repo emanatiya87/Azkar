@@ -1,8 +1,11 @@
 function decrease(count) {
   let number = parseInt(count.innerHTML);
   number == 0 ? 0 : number--;
+  if (number == 0) {
+    count.style.backgroundColor = "var(--right)";
+  }
   count.innerHTML = number;
-  console.log(number);
+  // console.log(number);
 }
 fetch("js/azkar.json")
   .then((response) => response.json())
@@ -15,22 +18,48 @@ let alazkar = document.getElementById("alazkar");
 // Function to display Azkar on the page
 function displayAzkar(data) {
   let cartona = "";
-  alazkar.innerHTML = " ";
+  alazkar.innerHTML = "";
   data.forEach((zekr) => {
     cartona += `
+     <br>
        <div class="row">
           <div class="col-md-8 text-center">${zekr.content} </div>
-          <div class="col-md-4">
+          <div class="col-md-4 bigCounter">
             <div
               class="counter d-flex justify-content-center align-items-center mx-auto"
-              onclick="decrease(this)"
+              onclick="decrease(this)" id="counter" data-original-count="${zekr.count}"
             >
               ${zekr.count}
             </div>
+            <div id="reset" onclick="reset(this)" ><i class="fa-solid fa-rotate-right"></i></div>
+
           </div>
         </div>
-          <br>
+         
       `;
     alazkar.innerHTML = cartona;
   });
+}
+// up btn
+upBtn = document.getElementById("upBtn");
+window.onscroll = function () {
+  if (window.scrollY >= 800) {
+    upBtn.style.display = "block";
+  } else {
+    upBtn.style.display = "none";
+  }
+};
+
+upBtn.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+// reset counter
+function reset(ResetBtn) {
+  let counter = ResetBtn.previousElementSibling;
+  let number = counter.getAttribute("data-original-count");
+  counter.innerHTML = number;
+  counter.style.backgroundColor = "var(--primarycolor)";
 }
