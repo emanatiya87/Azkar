@@ -16,6 +16,12 @@ body {
 .content {
   border-radius: 10px;
 }
+.content span {
+  /* border: 1px solid red; */
+  font-size: 19px;
+  color: var(--right);
+}
+
 .counter {
   background-color: var(--primarycolor);
   border-radius: 15px;
