@@ -16,4 +16,5 @@ body {
   width: 100px;
   color: beige;
   font-weight: bold;
+  cursor: pointer;
 }
