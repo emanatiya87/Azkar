@@ -1,0 +1,19 @@
+:root {
+  --primarycolor: brown;
+  --secondarycolor: gray;
+}
+body {
+  font-size: 32px;
+}
+.azkarBox {
+  border: 1px solid var(--primarycolor);
+  border-radius: 10px;
+}
+.counter {
+  background-color: var(--primarycolor);
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  color: beige;
+  font-weight: bold;
+}
