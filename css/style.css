@@ -1,7 +1,7 @@
 :root {
   --primarycolor: rgb(168, 82, 97);
   --secondarycolor: beige;
-  --gray: rgb(204, 201, 201);
+  --gray: rgb(54, 52, 54);
   --right: rgb(41, 128, 179);
   --done: rgb(25, 150, 150);
 }
@@ -52,11 +52,15 @@ h1 {
 a {
   text-decoration: none;
   text-align: center;
-  color: var(--gray);
+  color: var(--secondarycolor);
   font-weight: bold;
 }
 .choose {
   text-align: center;
+  background-color: var(--primarycolor);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 5px;
 }
 .up-btn {
   width: 35px;
