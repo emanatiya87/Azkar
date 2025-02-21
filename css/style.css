@@ -24,6 +24,7 @@ body {
   color: var(--secondarycolor);
   font-weight: bold;
   cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 #reset {
   position: absolute;
@@ -48,6 +49,7 @@ h1 {
   margin-bottom: 0;
   border-radius: 10px;
   padding: 7px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 a {
   text-decoration: none;
@@ -61,6 +63,7 @@ a {
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 .up-btn {
   width: 35px;
@@ -77,6 +80,7 @@ a {
   bottom: 10px;
   right: 5px;
   display: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 575.98px) {
   .container {
