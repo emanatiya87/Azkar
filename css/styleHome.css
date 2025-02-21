@@ -1,0 +1,19 @@
+:root {
+  --primarycolor: brown;
+  --secondarycolor: rgb(68, 67, 67);
+}
+
+p {
+  font-weight: bold;
+}
+p span {
+  color: var(--primarycolor);
+}
+header {
+  background-color: var(--primarycolor);
+  border-radius: 10px;
+  padding: 10px;
+}
+a {
+  color: white;
+}

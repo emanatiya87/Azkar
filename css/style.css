@@ -1,6 +1,6 @@
 :root {
   --primarycolor: brown;
-  --secondarycolor: gray;
+  --secondarycolor: rgb(68, 67, 67);
 }
 body {
   font-size: 32px;
@@ -17,4 +17,18 @@ body {
   color: beige;
   font-weight: bold;
   cursor: pointer;
+}
+h1 {
+  text-align: center;
+  color: white;
+  background-color: var(--primarycolor);
+  margin-bottom: 0;
+  border-radius: 10px;
+  padding: 7px 0;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+  color: var(--secondarycolor);
+  font-weight: bold;
 }
