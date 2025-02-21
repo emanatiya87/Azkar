@@ -32,3 +32,6 @@ a {
   color: var(--secondarycolor);
   font-weight: bold;
 }
+.choose {
+  text-align: center;
+}
