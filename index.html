@@ -8,9 +8,19 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/png" href="images/logo.jpg" />
     <link rel="stylesheet" href="css/styleHome.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
 
   <body>
+    <div
+      class="d-flex justify-content-center align-items-center"
+      id="loadingPage"
+    >
+      <i class="fa-solid fa-kaaba"></i>
+    </div>
     <br />
     <header class="container">
       <div class="row">
@@ -28,10 +38,6 @@
       </div>
     </header>
     <br />
-    <!-- <h1 class="container">أذكار الصباح</h1>
-    <section>
-      <div id="alazkar" class="container azkarBox">Loading...</div>
-    </section> -->
     <section>
       <div class="container">
         <div class="row">
@@ -48,7 +54,7 @@
         </div>
       </div>
     </section>
-    <div class="btn up-btn">UP</div>
+    <div class="btn up-btn" id="upBtn">UP</div>
 
     <script src="js/script.js"></script>
     <script src="js/bootstrap.min.js"></script>
