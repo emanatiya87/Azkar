@@ -19,7 +19,7 @@ let alazkar = document.getElementById("alazkar");
 function displayAzkar(data) {
   let cartona = " ";
   alazkar.innerHTML = " ";
-  data.forEach((zekr) => {
+  data["أذكار الصباح"].forEach((zekr) => {
     cartona += `
        <br>
          <div class="row">
@@ -39,6 +39,7 @@ function displayAzkar(data) {
     alazkar.innerHTML = cartona;
   });
 }
+
 // reset counter
 function reset(ResetBtn) {
   let counter = ResetBtn.previousElementSibling;
