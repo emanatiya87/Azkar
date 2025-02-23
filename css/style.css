@@ -21,6 +21,7 @@ body {
   /* border: 1px solid red; */
   font-size: 19px;
   color: var(--right);
+  display: block;
 }
 
 .counter {
