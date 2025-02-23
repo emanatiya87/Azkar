@@ -1,19 +1,19 @@
-let azkarAlmasaa = document.getElementById("azkarAlmasaa");
+let azkarEstykaz = document.getElementById("azkarEstykaz");
 fetch("js/azkar.json")
   .then((response) => response.json())
   .then((data) => {
-    displayAzkarAlmasaa(data);
+    displayTsabeeh(data);
   })
   .catch((error) => console.error("Error loading JSON:", error));
 
 // Function to display Azkar on the page
-function displayAzkarAlmasaa(data) {
+function displayTsabeeh(data) {
   let cartona = " ";
-  azkarAlmasaa.innerHTML = " ";
-  data["أذكار المساء"].forEach((zekr) => {
+  azkarEstykaz.innerHTML = " ";
+  data["أذكار الاستيقاظ"].forEach((zekr) => {
     cartona += `
 <div class="row">
-  <div class="col-md-8 text-center content"><span><b>${zekr.reference}</b></span> <br>
+  <div class="col-md-8 text-center content">
     ${zekr.content}<br /><span>${zekr.description}</span>
   </div>
   <div class="col-md-4 bigCounter">
@@ -32,6 +32,6 @@ function displayAzkarAlmasaa(data) {
 </div>
 
 `;
-    azkarAlmasaa.innerHTML = cartona;
+    azkarEstykaz.innerHTML = cartona;
   });
 }

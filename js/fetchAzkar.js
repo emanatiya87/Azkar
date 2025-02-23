@@ -23,7 +23,7 @@ function displayAzkar(data) {
     cartona += `
        <br>
          <div class="row">
-            <div class="col-md-8 text-center content">${zekr.content}<br><span>${zekr.description}</span></div>
+            <div class="col-md-8 text-center content"><span><b>${zekr.reference}</b></span> <br />${zekr.content}<br><span>${zekr.description}</span></div>
             <div class="col-md-4 bigCounter">
               <div
                 class="counter d-flex justify-content-center align-items-center mx-auto"

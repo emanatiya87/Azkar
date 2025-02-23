@@ -1,4 +1,4 @@
-let azkarAlmasaa = document.getElementById("azkarAlmasaa");
+let ad3yaQuraan = document.getElementById("ad3yaQuraan");
 fetch("js/azkar.json")
   .then((response) => response.json())
   .then((data) => {
@@ -9,12 +9,12 @@ fetch("js/azkar.json")
 // Function to display Azkar on the page
 function displayAzkarAlmasaa(data) {
   let cartona = " ";
-  azkarAlmasaa.innerHTML = " ";
-  data["أذكار المساء"].forEach((zekr) => {
+  ad3yaQuraan.innerHTML = " ";
+  data["أدعية قرآنية"].forEach((zekr) => {
     cartona += `
 <div class="row">
-  <div class="col-md-8 text-center content"><span><b>${zekr.reference}</b></span> <br>
-    ${zekr.content}<br /><span>${zekr.description}</span>
+  <div class="col-md-8 text-center content">
+    ${zekr.content}<br /><span>${zekr.reference}</span>
   </div>
   <div class="col-md-4 bigCounter">
     <div
@@ -32,6 +32,6 @@ function displayAzkarAlmasaa(data) {
 </div>
 
 `;
-    azkarAlmasaa.innerHTML = cartona;
+    ad3yaQuraan.innerHTML = cartona;
   });
 }

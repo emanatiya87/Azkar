@@ -8,13 +8,12 @@ fetch("js/azkar.json")
 
 // Function to display Azkar on the page
 function displayAzkarElnom(data) {
-  console.log("masaaa");
   let cartona = " ";
   azkarElnom.innerHTML = " ";
   data["أذكار النوم"].forEach((zekr) => {
     cartona += `
 <div class="row">
-  <div class="col-md-8 text-center content">
+  <div class="col-md-8 text-center content"><span><b>${zekr.reference}</b></span> <br>
     ${zekr.content}<br /><span>${zekr.description}</span>
   </div>
   <div class="col-md-4 bigCounter">

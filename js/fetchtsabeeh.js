@@ -8,7 +8,6 @@ fetch("js/azkar.json")
 
 // Function to display Azkar on the page
 function displayTsabeeh(data) {
-  console.log("masaaa");
   let cartona = " ";
   tsabeeh.innerHTML = " ";
   data["تسابيح"].forEach((zekr) => {
