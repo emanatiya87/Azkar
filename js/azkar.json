@@ -987,5 +987,21 @@
       "reference": ". [يوسف - 101].",
       "content": " إِنَّمَا أَشْكُو بَثِّي وَحُزْنِي إِلَى اللَّهِ. [يوسف - 86]. "
     }
+  ],
+  "بودكاست": [
+    {
+      "category": "بودكاست",
+      "description": "م علاء حامد",
+      "vidieo": "https://www.youtube.com/embed/DH0vF7DsiE8?list=PL1i_D1Vw3d5MJuAkduJ6TaiGEVac6GePK",
+      "URL": "https://www.youtube.com/playlist?list=PL1i_D1Vw3d5MJuAkduJ6TaiGEVac6GePK",
+      "content": " السيرة النبوية "
+    },
+    {
+      "category": "بودكاست",
+      "description": "محمد الغليظ ",
+      "vidieo": "https://www.youtube.com/embed/Gvyp9YW24fU?list=PLgqtKVxUxe2o2R94qDb1jEaPG9u0yygyf",
+      "URL": "https://www.youtube.com/playlist?list=PLgqtKVxUxe2o2R94qDb1jEaPG9u0yygyf",
+      "content": " سلسلة اعرف ربك "
+    }
   ]
 }
