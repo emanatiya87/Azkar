@@ -13,9 +13,9 @@ function displayPodcast(data) {
   data["بودكاست"].forEach((zekr) => {
     cartona += `
 <div class="row">
-  <div class="col-md-8 text-center content">
-    <a href="${zekr.URL}"><i class="fa-solid fa-link"></i>${zekr.content}</a>  <br /><span>${zekr.description}</span>
-    <iframe width="250" height="200" src="${zekr.vidieo}" allowfullscreen></iframe>
+  <div class="col text-center content">
+    <a href="${zekr.URL}" class="playlist"><i class="fa-solid fa-link"></i>${zekr.content}</a>  <br /><span class="name">${zekr.description}</span>
+    <iframe width="280" height="200" src="${zekr.vidieo}" allowfullscreen></iframe>
   </div>
  
 </div>

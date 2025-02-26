@@ -82,6 +82,9 @@ body {
   border: 1px dotted var(--secondarycolor);
   transition: 0.3s;
 }
+a {
+  text-decoration: none;
+}
 #reset:hover {
   color: var(--gray);
   transform: rotate(360deg);
@@ -99,7 +102,7 @@ h1 {
   padding: 7px 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
-a {
+.choose a {
   text-decoration: none;
   text-align: center;
   color: var(--secondarycolor);
@@ -153,4 +156,10 @@ a {
 }
 html {
   scroll-behavior: smooth;
+}
+.playlist {
+  color: var(--white);
+  background-color: var(--right);
+  padding: 10px;
+  border-radius: 25px;
 }
