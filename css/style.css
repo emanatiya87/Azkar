@@ -8,7 +8,7 @@
   --dark: black;
 }
 body {
-  font-size: 32px;
+  font-size: 25px;
   font-family: "Amiri", "Cairo", sans-serif;
   background-color: var(--white);
   color: var(--dark);
