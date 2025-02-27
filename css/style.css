@@ -9,7 +9,7 @@
 }
 body {
   font-size: 32px;
-  font-family: "Amiri", serif;
+  font-family: "Amiri", "Cairo", sans-serif;
   background-color: var(--white);
   color: var(--dark);
 }
@@ -157,13 +157,17 @@ html {
   scroll-behavior: smooth;
 }
 .playlist {
+  margin: 15px 0;
   color: var(--white);
   background-color: var(--right);
-  padding: 10px;
+  padding: 3px 10px;
   border-radius: 25px;
   transition: 0.3s;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 .playlist:hover {
-  padding: 12px;
+  padding: 7px 15px;
+}
+.name {
+  padding: 10px 0;
 }

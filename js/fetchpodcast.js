@@ -15,7 +15,7 @@ function displayPodcast(data) {
 <div class="row">
   <div class="col text-center content">
     <a href="${zekr.URL}" class="playlist"><i class="fa-solid fa-link"></i>${zekr.content}</a>  <br /><span class="name">${zekr.description}</span>
-    <iframe width="280" height="200" src="${zekr.vidieo}" allowfullscreen></iframe>
+    <iframe id="youtubePlayer" width="280" height="200" src="${zekr.vidieo}" allowfullscreen></iframe>
   </div>
  
 </div>
