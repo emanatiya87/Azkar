@@ -60,7 +60,6 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 .counter:hover {
@@ -162,4 +161,9 @@ html {
   background-color: var(--right);
   padding: 10px;
   border-radius: 25px;
+  transition: 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.playlist:hover {
+  padding: 12px;
 }

@@ -1002,6 +1002,76 @@
       "vidieo": "https://www.youtube.com/embed/Gvyp9YW24fU?list=PLgqtKVxUxe2o2R94qDb1jEaPG9u0yygyf",
       "URL": "https://www.youtube.com/playlist?list=PLgqtKVxUxe2o2R94qDb1jEaPG9u0yygyf",
       "content": " سلسلة اعرف ربك "
+    },
+    {
+      "category": "بودكاست",
+      "description": "احمد الصابوني",
+      "vidieo": "https://www.youtube.com/embed/-dNvW7azAPU",
+      "URL": "https://www.youtube.com/watch?v=-dNvW7azAPU",
+      "content": "قيام الليل "
+    },
+    {
+      "category": "بودكاست",
+      "description": "احمد عامر",
+      "vidieo": "https://www.youtube.com/embed/ejBKVRYtY_s?list=PLSSxr3Rf2_X09k084XozCL-GIIil-lC4V",
+      "URL": "https://www.youtube.com/playlist?list=PLSSxr3Rf2_X09k084XozCL-GIIil-lC4V",
+      "content": " قصص القرآن"
+    },
+    {
+      "category": "بودكاست",
+      "description": "احمد عامر",
+      "vidieo": "https://www.youtube.com/embed/Atx8H_b-cbU?list=PLSSxr3Rf2_X08SJxnv0bvsz-L1GjzNlIO",
+      "URL": "https://www.youtube.com/playlist?list=PLSSxr3Rf2_X08SJxnv0bvsz-L1GjzNlIO",
+      "content": " قصص سورة الكهف"
+    },
+    {
+      "category": "بودكاست",
+      "description": "نبيل العوضي",
+      "vidieo": "https://www.youtube.com/embed/pB7uZzu2dLI?list=PLbDRORmj0gydNzexxDf-HufsQLbT3GIJl",
+      "URL": "https://www.youtube.com/playlist?list=PLbDRORmj0gydNzexxDf-HufsQLbT3GIJl",
+      "content": " قصص الانبياء "
+    },
+    {
+      "category": "بودكاست",
+      "description": "احمد عامر وحازم صديق",
+      "vidieo": "https://www.youtube.com/embed/RhTxjl_W_BM?list=PLCpK4282MCT-lBXi4Nodjzq1TDZsK9qwr",
+      "URL": "https://www.youtube.com/playlist?list=PLCpK4282MCT-lBXi4Nodjzq1TDZsK9qwr",
+      "content": " بودكاست وعي"
+    },
+    {
+      "category": "بودكاست",
+      "description": "محمد الغليظ ",
+      "vidieo": "https://www.youtube.com/embed/zVj2KSM99GA",
+      "URL": "https://www.youtube.com/watch?v=zVj2KSM99GA",
+      "content": "صفحة جديدة مع الله"
+    },
+    {
+      "category": "بودكاست",
+      "description": "د.عبدالرحمن الحرمي",
+      "vidieo": "https://www.youtube.com/embed/am6jfmu7E_M",
+      "URL": "https://www.youtube.com/watch?v=am6jfmu7E_M",
+      "content": "القضاء و القدر(لا تستهين بالدعاء)"
+    },
+    {
+      "category": "بودكاست",
+      "description": " د. أحمد العربي",
+      "vidieo": "https://www.youtube.com/embed/63_AOCldyXo?list=PL5tyAOHO2ckcm6Coo4MbMPL7BfbBpom9_",
+      "URL": "https://www.youtube.com/playlist?list=PL5tyAOHO2ckcm6Coo4MbMPL7BfbBpom9_",
+      "content": "سلسلة تذوق العبادات"
+    },
+    {
+      "category": "بودكاست",
+      "description": "د أحمد عبد المنعم",
+      "vidieo": "https://www.youtube.com/embed/EhD6wwUmvrs?list=PLGrnoH-peDDMoYtdypdd93yy4b6GKvYMo",
+      "URL": "https://www.youtube.com/playlist?list=PLGrnoH-peDDMoYtdypdd93yy4b6GKvYMo",
+      "content": "تفسير القرآن الكريم"
+    },
+    {
+      "category": "بودكاست",
+      "description": "الدكتور امير منير و الشيخ محمد الغليظ و الداعية ياسر ممدوح",
+      "vidieo": "https://www.youtube.com/embed/0k_jXol-Niw?list=PLlXQj2VGUTmdN73dvFG17xdOCoM2E1K66",
+      "URL": "https://www.youtube.com/playlist?list=PLlXQj2VGUTmdN73dvFG17xdOCoM2E1K66",
+      "content": "عالمغرب رمضان 2024"
     }
   ]
 }
