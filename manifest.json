@@ -1,0 +1,9 @@
+{
+  "name": "Azkar App",
+  "short_name": "Azkar",
+  "description": "Islamic application for Quran, Azkar, and podcasts",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4285f4"
+}
