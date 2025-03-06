@@ -1,8 +1,7 @@
-// Let's update the service worker with relative paths and better error handling
+// Service Worker for Azkar App
 
 const CACHE_NAME = 'azkar-app-v1';
 const urlsToCache = [
-    // HTML files - using relative paths
     './',
     './index.html',
     './ad3yaQuraan.html',
@@ -56,18 +55,16 @@ const urlsToCache = [
     './images/moon-half-visible-face-on-night-sky.jpg'
 ];
 
-// Install event with improved error handling
+// Install event - cache assets
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
                 console.log('Opened cache');
-                // Cache each resource individually to identify failures
                 return Promise.all(
                     urlsToCache.map(url => {
                         return cache.add(url).catch(error => {
                             console.error(`Failed to cache: ${url}`, error);
-                            // Continue despite the error
                             return Promise.resolve();
                         });
                     })
@@ -76,42 +73,36 @@ self.addEventListener('install', event => {
     );
 });
 
-// Fetch event with offline fallback
+// Fetch event - handle requests and serve from cache
 self.addEventListener('fetch', event => {
+    let requestUrl = new URL(event.request.url);
+
+    // Ensure the root `/` serves `index.html`
+    if (requestUrl.origin === location.origin && requestUrl.pathname === '/') {
+        event.respondWith(caches.match('./index.html'));
+        return;
+    }
+
     event.respondWith(
         caches.match(event.request)
             .then(response => {
-                // Cache hit - return the response from cache
-                if (response) {
-                    return response;
-                }
+                if (response) return response;
 
-                // Clone the request because request is a stream and can only be consumed once
-                const fetchRequest = event.request.clone();
+                return fetch(event.request).then(networkResponse => {
+                    // Only cache valid responses
+                    if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+                        return networkResponse;
+                    }
 
-                return fetch(fetchRequest)
-                    .then(response => {
-                        // Check if we received a valid response
-                        if (!response || response.status !== 200 || response.type !== 'basic') {
-                            return response;
-                        }
+                    let responseToCache = networkResponse.clone();
 
-                        // Clone the response because response is a stream and can only be consumed once
-                        const responseToCache = response.clone();
+                    caches.open(CACHE_NAME)
+                        .then(cache => {
+                            cache.put(event.request, responseToCache);
+                        });
 
-                        caches.open(CACHE_NAME)
-                            .then(cache => {
-                                cache.put(event.request, responseToCache);
-                            });
-
-                        return response;
-                    })
-                    .catch(() => {
-                        // If the fetch fails (user is offline), return a default offline page for HTML requests
-                        if (event.request.headers.get('Accept').includes('text/html')) {
-                            return caches.match('./offline.html');
-                        }
-                    });
+                    return networkResponse;
+                });
             })
     );
 });
@@ -123,8 +114,7 @@ self.addEventListener('activate', event => {
         caches.keys().then(cacheNames => {
             return Promise.all(
                 cacheNames.map(cacheName => {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
-                        // If this cache name isn't in the whitelist, delete it
+                    if (!cacheWhitelist.includes(cacheName)) {
                         return caches.delete(cacheName);
                     }
                     return Promise.resolve();
