@@ -13,7 +13,7 @@ function displayAzkarAlmasaa(data) {
   data["أذكار المساء"].forEach((zekr) => {
     cartona += `
 <div class="row">
-  <div class="col-md-8 text-center content"><span><b>${zekr.reference}</b></span>
+  <div class="col-md-8 text-center content"  dir="rtl"><span><b>${zekr.reference}</b></span>
     ${zekr.content}<br /><span>${zekr.description}</span>
   </div>
   <div class="col-md-4 bigCounter">

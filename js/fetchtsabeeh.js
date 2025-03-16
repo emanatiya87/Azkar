@@ -13,7 +13,7 @@ function displayTsabeeh(data) {
   data["تسابيح"].forEach((zekr) => {
     cartona += `
 <div class="row">
-  <div class="col-md-8 text-center content">
+  <div class="col-md-8 text-center content"  dir="rtl">
     ${zekr.content}<br /><span>${zekr.description}</span>
   </div>
   <div class="col-md-4 bigCounter">

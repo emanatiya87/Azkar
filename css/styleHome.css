@@ -41,4 +41,29 @@ a {
   position: fixed;
   color: var(--gray);
   font-size: 100px;
+  z-index: 10;
+}
+.doaa {
+  width: 80%;
+  height: 250px;
+  overflow: auto;
+  background-color: white;
+  color: black;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 15px 15px 15px 30px;
+}
+.fa-circle-xmark {
+  position: fixed;
+  left: 0;
+  cursor: pointer;
+  margin: 5px;
+  color: var(--right);
+}
+.doaa .end {
+  color: var(--right);
 }
