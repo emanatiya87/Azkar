@@ -2,13 +2,10 @@ setTimeout(function () {
   let loadingPage = document.getElementById("loadingPage");
   if (loadingPage) {
     loadingPage.style.visibility = "hidden";
+    var myModal = new bootstrap.Modal(document.getElementById("welcomeModal"));
+    myModal.show();
   }
 }, 1000);
-let doaa = document.getElementById("doaa");
-let exit = document.getElementById("exit");
-exit.addEventListener("click", function () {
-  doaa.style.display = "none";
-});
 let doaaContent = document.getElementById("doaaContent");
 fetch("js/azkar.json")
   .then((response) => response.json())
