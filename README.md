@@ -1,0 +1,1 @@
+A user-friendly and fully responsive Islamic Azkar website that offers a collection of various Azkar with a built-in counter for easy tracking. It also includes YouTube videos and playlists for a richer experience, along with both light and dark modes for user convenience.
