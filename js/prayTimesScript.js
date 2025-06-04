@@ -1,12 +1,18 @@
 let prays = document.getElementById("prays");
 let hijriDate = document.getElementById("hijriDate");
+let city = document.getElementById("city");
+console.log(city.value);
 // fetch data of times
-fetch("https://api.aladhan.com/v1/timingsByCity?country=EG&city=Al Qāhirah")
-  .then((res) => res.json())
-  .then((data) => {
-    displayPrayTimes(data.data.timings);
-    displayHijriDate(data.data.date.hijri);
-  });
+function fetchAPI(cityName) {
+  fetch(`https://api.aladhan.com/v1/timingsByCity?country=EG&city=${cityName}`)
+    .then((res) => res.json())
+    .then((data) => {
+      displayPrayTimes(data.data.timings);
+      displayHijriDate(data.data.date.hijri);
+    });
+}
+// fun finction to appear cairo as starting
+fetchAPI("Al Qāhirah");
 //   display play times
 function displayPrayTimes(time) {
   prays.innerHTML = `
@@ -70,3 +76,7 @@ function displayPrayTimes(time) {
 function displayHijriDate(date) {
   hijriDate.innerText = `${date.weekday.ar} ${date.month.days} ${date.month.ar} ${date.year}`;
 }
+// change pray times relative to city
+city.addEventListener("change", function () {
+  fetchAPI(city.value);
+});
