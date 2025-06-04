@@ -1,0 +1,13 @@
+select {
+  background-color: transparent;
+  border: none;
+}
+option {
+  border-radius: 7px;
+}
+.dark-mode select {
+  color: white;
+}
+.dark-mode option {
+  color: black;
+}
