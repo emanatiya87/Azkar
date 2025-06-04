@@ -1,11 +1,11 @@
 let prays = document.getElementById("prays");
-
+let hijriDate = document.getElementById("hijriDate");
 // fetch data of times
 fetch("https://api.aladhan.com/v1/timingsByCity?country=EG&city=Al Qāhirah")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data.data.timings);
     displayPrayTimes(data.data.timings);
+    displayHijriDate(data.data.date.hijri);
   });
 //   display play times
 function displayPrayTimes(time) {
@@ -65,4 +65,8 @@ function displayPrayTimes(time) {
         </div>
       </div>
     `;
+}
+// display hijry date
+function displayHijriDate(date) {
+  hijriDate.innerText = `${date.weekday.ar} ${date.month.days} ${date.month.ar} ${date.year}`;
 }
