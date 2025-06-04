@@ -19,16 +19,16 @@ function displayPrayTimes(time) {
      <div class="d-flex justify-content-between align-items-center border rounded-4 px-3 mb-2 shadow">
         <div >
           <h3 class="text-info ">الفجر</h3>
-          <h3>${time.Fajr}</h3>
+          <h3>${convertTo12Hour(time.Fajr)}</h3>
         </div>
         <div class=" text-secondary">
-         <i class="fa-solid fa-clock"></i>
+        <i class="fa-regular fa-sun"></i>
         </div>
       </div>
       <div class="d-flex justify-content-between align-items-center border rounded-4 px-3 mb-2 shadow">
         <div >
           <h3 class="text-info ">الشروق</h3>
-          <h3>${time.Sunrise}</h3>
+          <h3>${convertTo12Hour(time.Sunrise)}</h3>
         </div>
         <div class=" text-secondary">
         <i class="fa-solid fa-sun"></i>
@@ -37,34 +37,34 @@ function displayPrayTimes(time) {
       <div class="d-flex justify-content-between align-items-center border rounded-4 px-3 mb-2 shadow">
         <div >
           <h3 class="text-info ">الضهر</h3>
-          <h3>${time.Dhuhr}</h3>
+          <h3>${convertTo12Hour(time.Dhuhr)}</h3>
         </div>
         <div class=" text-secondary">
-         <i class="fa-solid fa-clock"></i>
+         <i class="fa-solid fa-sun"></i>
         </div>
       </div>
       <div class="d-flex justify-content-between align-items-center border rounded-4 px-3 mb-2 shadow">
         <div >
           <h3 class="text-info ">العصر</h3>
-          <h3>${time.Asr}</h3>
+          <h3>${convertTo12Hour(time.Asr)}</h3>
         </div>
         <div class=" text-secondary">
-         <i class="fa-solid fa-clock"></i>
+         <i class="fa-solid fa-sun"></i>
         </div>
       </div>
       <div class="d-flex justify-content-between align-items-center border rounded-4 px-3 mb-2 shadow">
         <div >
           <h3 class="text-info ">المغرب</h3>
-          <h3>${time.Maghrib}</h3>
+          <h3>${convertTo12Hour(time.Maghrib)}</h3>
         </div>
         <div class=" text-secondary">
-         <i class="fa-solid fa-clock"></i>
+        <i class="fa-regular fa-moon"></i>
         </div>
       </div>
       <div class="d-flex justify-content-between align-items-center border rounded-4 px-3 mb-2 shadow">
         <div >
           <h3 class="text-info ">العشاء</h3>
-          <h3>${time.Isha}</h3>
+          <h3>${convertTo12Hour(time.Isha)}</h3>
         </div>
         <div class=" text-secondary">
          <i class="fa-solid fa-moon"></i>
@@ -80,3 +80,10 @@ function displayHijriDate(date) {
 city.addEventListener("change", function () {
   fetchAPI(city.value);
 });
+//  convert time to 12 instead of 24
+function convertTo12Hour(time24) {
+  let [hour, minute] = time24.split(":");
+  let hour12 = hour % 12 || 12; // convert to 12-hour format
+  let ampm = hour < 12 || hour == 24 ? "AM" : "PM";
+  return `${hour12}:${minute} ${ampm}`;
+}
