@@ -15,7 +15,8 @@ function fetchAPI(cityName) {
 fetchAPI("Al Qāhirah");
 //   display play times
 function displayPrayTimes(time) {
-  prays.innerHTML = `
+  let praysContent = "";
+  praysContent = `
      <div class="d-flex justify-content-between align-items-center border rounded-4 px-3 mb-2 shadow">
         <div >
           <h3 class="text-info ">الفجر</h3>
@@ -71,10 +72,11 @@ function displayPrayTimes(time) {
         </div>
       </div>
     `;
+  prays.innerHTML = praysContent;
 }
 // display hijry date
 function displayHijriDate(date) {
-  hijriDate.innerText = `${date.weekday.ar} ${date.month.days} ${date.month.ar} ${date.year}`;
+  hijriDate.innerText = `${date.weekday.ar} ${date.day} ${date.month.ar} ${date.year}`;
 }
 // change pray times relative to city
 city.addEventListener("change", function () {
